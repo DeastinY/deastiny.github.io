@@ -1,0 +1,109 @@
+$darker_back_colour: #2cc3ff13;
+$lighter_back_colour: rgba(229, 253, 248, 0.795);
+$date_and_place_text: #ffffff;
+
+body {
+  background-color: $lighter_back_colour;
+  font-family: 'Ubuntu';
+}
+/* Centered texts in each section
+      * --------------------------------------- */
+.section {
+  text-align: center;
+  overflow: hidden;
+}
+
+/* Layer with position absolute in order to have it over the video
+      * --------------------------------------- */
+#section0 {
+  overflow: hidden; /*solves problem with overflowing video in Mac with Chrome */
+  #myVideo {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-size: 100% 100%;
+    background-color: $lighter_back_colour;
+    background-position: center center;
+    background-size: contain;
+    object-fit: cover;
+    z-index: 3;
+  }
+  .layer {
+    position: relative;
+    z-index: 4;
+    width: 100%;
+    height: 100vh;
+    left: 0;
+    right: 0;
+    top: 7%;
+    bottom: 5%;
+    -webkit-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+  video::-webkit-media-controls {
+    display: none !important;
+  }
+  .dateAndPlace {
+    position: absolute;
+    color: $date_and_place_text;
+    font-size: calc(1.3rem + 0.7vw);
+    bottom: 12%;
+    left: 0;
+    width: 100%;
+  }
+  @media (max-width: 600px) {
+    .dateAndPlace {
+      font-size: calc(0.9rem + 0.3vw);
+    }
+    .pplace {
+      text-align: end;
+    }
+  }
+  @media (max-width: 400px) {
+    .pplace {
+      text-align: end;
+    }
+  }
+}
+
+#section1 {
+  background-image: linear-gradient(
+    176deg,
+    $lighter_back_colour 75%,
+    $darker_back_colour calc(70% + 2px)
+  );
+  p,
+  .p {
+    font-size: calc(1rem + 0.7vw);
+  }
+  @media (max-width: 600px) {
+    p,
+    .p {
+      font-size: calc(0.8rem + 0.6vw);
+    }
+  }
+}
+
+#section2 {
+  background-image: linear-gradient(
+    176deg,
+    $darker_back_colour 75%,
+    $lighter_back_colour calc(70% + 2px)
+  );
+  h1,
+  .h1 {
+    text-align: left;
+    font-size: calc(1rem + 0.7vw);
+  }
+  @media (max-width: 600px) {
+    h1,
+    .h1 {
+      font-size: calc(0.8rem + 0.6vw);
+    }
+  }
+}

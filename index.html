@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.8/fullpage.min.css"
+      integrity="sha256-+dIh4jG2jQTHZwW81yUo8h6tzXWcNumyNL5XPZbwp1E="
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Marcellus"
+      rel="stylesheet"
+    />
+    <link href="styles/page.css" rel="stylesheet" />
+
+    <title>Lina & Richard 2020</title>
+  </head>
+  <body>
+    <div id="fullpage">
+      <!-- Video -->
+      <div class="section " id="section0" data-anchor="anchor1">
+        <video id="myVideo" loop muted data-autoplay poster=img/holiday.png>
+        </video>
+        <div class="container layer justify-content-center">
+          <img src="img/mx.png" class="img-fluid mx-auto d-block" />
+          <div class="container">
+            <div class="row justify-content-between dateAndPlace">
+              <div class="col ddate">
+                <p><time datetime="2020-05-16">16 Mai 2020</time></p>
+              </div>
+              <div class="col pplace">
+                <p>Stolberg-Zweifall </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Text -->
+      <div class="section" id="section1" data-anchor="anchor2">
+        <div class="container">
+          <div class="row justify-content-center text-center">
+            <div class="col">
+              <p class="text-justify">
+                Am 16.05. ist es endlich so weit!<br>Auch wenn die kontinuierliche Bestrahlung durch 5G Masten einer physischen Teilnahme im Wege steht, möchten wir euch herzlich dazu Einladen uns im Internet zu beobachten. Like, Fav und Subscribe nicht vergessen; um 10:45 Uhr am Samstag geht's los.<br>
+                Streamtickets zur Hochzeitsnacht gibt's ab 5€/Minute auf onlyfans!!
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Youtube video streaming -->
+      <div class="section" id="section2" data-anchor="anchor3">
+        <div class="container">
+          <h1>Stream Lina und Richard's Hochzeit:</h1>
+
+          <div class="embed-responsive embed-responsive-16by9">
+            <iframe src="http://178.201.237.127:8080/player.html" name="restreamer-player" width="800" height="450" scrolling="no" frameborder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen="true"></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Optional JavaScript allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"-->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.8/fullpage.min.js"
+      integrity="sha256-caNcSA0LvOCX90PTuEbwl+V09xPMca13CJUasl+VCtk="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      new fullpage('#fullpage', {
+        //options here
+        autoScrolling: true,
+        verticalCentered: true,
+        scrollHorizontally: true,
+      })
+
+      //methods
+      fullpage_api.setAllowScrolling(true)
+    </script>
+  </body>
+</html>

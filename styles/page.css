@@ -1,0 +1,110 @@
+body {
+  background-color: rgba(229, 253, 248, 0.795);
+  font-family: 'Ubuntu';
+}
+
+/* Centered texts in each section
+      * --------------------------------------- */
+.section {
+  text-align: center;
+  overflow: hidden;
+}
+
+/* Layer with position absolute in order to have it over the video
+      * --------------------------------------- */
+#section0 {
+  overflow: hidden;
+  /*solves problem with overflowing video in Mac with Chrome */
+}
+
+#section0 #myVideo {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-size: 100% 100%;
+  background-color: rgba(229, 253, 248, 0.795);
+  background-position: center center;
+  background-size: contain;
+  -o-object-fit: cover;
+     object-fit: cover;
+  z-index: 3;
+}
+
+#section0 .layer {
+  position: relative;
+  z-index: 4;
+  width: 100%;
+  height: 100vh;
+  left: 0;
+  right: 0;
+  top: 7%;
+  bottom: 5%;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+#section0 video::-webkit-media-controls {
+  display: none !important;
+}
+
+#section0 .dateAndPlace {
+  position: absolute;
+  color: #ffffff;
+  font-size: calc(1.3rem + 0.7vw);
+  bottom: 12%;
+  left: 0;
+  width: 100%;
+}
+
+@media (max-width: 600px) {
+  #section0 .dateAndPlace {
+    font-size: calc(0.9rem + 0.3vw);
+  }
+  #section0 .pplace {
+    text-align: end;
+  }
+}
+
+@media (max-width: 400px) {
+  #section0 .pplace {
+    text-align: end;
+  }
+}
+
+#section1 {
+  background-image: linear-gradient(176deg, rgba(229, 253, 248, 0.795) 75%, #2cc3ff13 calc(70% + 2px));
+}
+
+#section1 p,
+#section1 .p {
+  font-size: calc(1rem + 0.7vw);
+}
+
+@media (max-width: 600px) {
+  #section1 p,
+  #section1 .p {
+    font-size: calc(0.8rem + 0.6vw);
+  }
+}
+
+#section2 {
+  background-image: linear-gradient(176deg, #2cc3ff13 75%, rgba(229, 253, 248, 0.795) calc(70% + 2px));
+}
+
+#section2 h1,
+#section2 .h1 {
+  text-align: left;
+  font-size: calc(1rem + 0.7vw);
+}
+
+@media (max-width: 600px) {
+  #section2 h1,
+  #section2 .h1 {
+    font-size: calc(0.8rem + 0.6vw);
+  }
+}
+/*# sourceMappingURL=page.css.map */
